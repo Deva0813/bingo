@@ -1,3 +1,0 @@
-class Bingo:
-    '''Bingo class'''
-    
