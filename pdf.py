@@ -9,14 +9,17 @@ class PDF_GENERATOR:
         for i, card in enumerate(cards):
             pdf.add_page()
 
+            # Add Bingo card heading with card number
             pdf.set_font("Arial", 'B', 16)
             pdf.cell(0, 10, f"Bingo Card {i+1}", ln=True, align='C')
             pdf.ln(10)  
-
+            
+            # Add BINGO 
             pdf.set_font("Arial", 'B', 20)
             pdf.cell(0, 10, "B   I   N   G   O", ln=True, align='C')
             pdf.ln(10)  
 
+            # Calculating the position to center the Bingo card matrix
             card_width = card.shape[1] * 15
             horizontal_position = (pdf.w - card_width) / 2
 
